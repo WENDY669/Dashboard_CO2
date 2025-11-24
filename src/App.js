@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     // Cargar datos del CSV
-    fetch('/data/co2_emissions_1940_clean.csv')
+    fetch(process.env.PUBLIC_URL + "/data/co2_ocde_clean.csv")
       .then(response => response.text())
       .then(csvText => {
         Papa.parse(csvText, {
