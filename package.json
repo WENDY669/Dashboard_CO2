@@ -1,5 +1,6 @@
 {
   "name": "co2-dashboard",
+  "homepage": "https://wendy669.github.io/Dashboard_CO2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
