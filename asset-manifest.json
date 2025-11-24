@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Dashboard_CO2/static/css/main.a3fca459.css",
-    "main.js": "/Dashboard_CO2/static/js/main.13b4d3f4.js",
+    "main.js": "/Dashboard_CO2/static/js/main.644fa17d.js",
     "index.html": "/Dashboard_CO2/index.html",
     "main.a3fca459.css.map": "/Dashboard_CO2/static/css/main.a3fca459.css.map",
-    "main.13b4d3f4.js.map": "/Dashboard_CO2/static/js/main.13b4d3f4.js.map"
+    "main.644fa17d.js.map": "/Dashboard_CO2/static/js/main.644fa17d.js.map"
   },
   "entrypoints": [
     "static/css/main.a3fca459.css",
-    "static/js/main.13b4d3f4.js"
+    "static/js/main.644fa17d.js"
   ]
 }
