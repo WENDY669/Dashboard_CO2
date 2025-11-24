@@ -8,10 +8,11 @@ const TopCountriesChart = ({ data }) => {
     
     data.forEach(item => {
       // Solo países, excluyendo regiones como "World", "Africa", etc.
-      if (item.tipo_entidad === 'Pais' && 
-          !item.entity.includes('(GCP)') && 
+        if (
+          item.entity &&
+          !item.entity.includes('(GCP)') &&
           !['World', 'Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania'].includes(item.entity)) {
-        
+          
         if (!countryTotals[item.entity]) {
           countryTotals[item.entity] = 0;
         }
