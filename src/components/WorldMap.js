@@ -9,13 +9,16 @@ const WorldMap = ({ data }) => {
 
   const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
+  // 👉 Fix SOLO para Estados Unidos
+  const nameFixes = {
+    "United States of America": "United States"
+  };
+
   const { countryData, yearRange, colorScale } = useMemo(() => {
     if (!data || data.length === 0) return { countryData: {}, yearRange: [], colorScale: null };
 
-    // Filtrar datos solo por año
     const yearData = data.filter(item => parseInt(item.year) === selectedYear);
 
-    // Excluir regiones y agrupaciones
     const excludedEntities = [
       "World", "Africa", "Asia", "Europe",
       "North America", "South America", "Oceania"
@@ -72,7 +75,13 @@ const WorldMap = ({ data }) => {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map(geo => {
-                const name = geo.properties.name;
+
+                // 👉 Aplicando la corrección aquí
+                let name = geo.properties.name;
+                if (nameFixes[name]) {
+                  name = nameFixes[name];
+                }
+
                 const emissions = countryData[name]?.emissions ?? 0;
 
                 return (
