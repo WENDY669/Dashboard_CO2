@@ -895,4 +895,29 @@ body {
   .page-numbers {
     order: -1;
   }
+  .tooltip {
+  position: absolute;
+  background: #111;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  pointer-events: none;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.reset-btn {
+  background: #0055ff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.reset-btn:hover {
+  background: #003bb5;
+}
+
 }
